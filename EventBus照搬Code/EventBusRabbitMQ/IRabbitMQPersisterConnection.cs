@@ -1,0 +1,11 @@
+using RabbitMQ.Client;
+
+namespace EventBus照搬Code.EventBusRabbitMQ
+{
+    public interface IRabbitMQPersistentConnection : IDisposable
+    {
+        bool IsConnected { get; }
+        bool TryConnect();
+        IModel CreateModel();
+    }
+}
