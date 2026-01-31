@@ -129,6 +129,7 @@ namespace EventBus照搬Code.微服务内部
             // 🎯 通用日志记录（所有队列都订阅）
             eventBus.SubscribeDynamicToQueue<UniversalLoggerEventHandler>("high_priority_queue", "OrderStartedIntegrationEvent");
             eventBus.SubscribeDynamicToQueue<UniversalLoggerEventHandler>("high_priority_queue", "UserCheckoutAcceptedIntegrationEvent");
+
             eventBus.SubscribeDynamicToQueue<UniversalLoggerEventHandler>("low_priority_queue", "ProductPriceChangedIntegrationEvent");
             eventBus.SubscribeDynamicToQueue<UniversalLoggerEventHandler>("low_priority_queue", "OrderStartedIntegrationEvent");
 

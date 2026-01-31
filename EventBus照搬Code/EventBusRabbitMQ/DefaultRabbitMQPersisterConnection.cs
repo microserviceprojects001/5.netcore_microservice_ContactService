@@ -72,8 +72,7 @@ namespace EventBus照搬Code.EventBusRabbitMQ
 
                 policy.Execute(() =>
                 {
-                    _connection = _connectionFactory
-                        .CreateConnection();
+                    _connection = _connectionFactory.CreateConnection();
                 });
 
                 if (IsConnected)

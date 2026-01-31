@@ -164,6 +164,7 @@ namespace EventBus照搬Code.EventBus
             throw new InvalidOperationException("请使用带队列名称的重载方法");
         }
 
+
         private void RaiseOnEventRemoved(string eventName)
         {
             var handler = OnEventRemoved;

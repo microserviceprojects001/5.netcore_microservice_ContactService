@@ -116,13 +116,10 @@ namespace EventBus照搬Code.微服务内部
             services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
 
             // 注册事件处理器
-            services.AddTransient<IIntegrationEventHandler<ProductPriceChangedIntegrationEvent>,
-                                                                     ProductPriceChangedIntegrationEventHandler>();
+            services.AddTransient<IIntegrationEventHandler<ProductPriceChangedIntegrationEvent>, ProductPriceChangedIntegrationEventHandler>();
             // 推荐方式：通过接口注册
-            services.AddTransient<IIntegrationEventHandler<OrderStartedIntegrationEvent>,
-                                                                          OrderStartedIntegrationEventHandler>();
-            services.AddTransient<IIntegrationEventHandler<UserCheckoutAcceptedIntegrationEvent>,
-                                                                                    UserCheckoutAcceptedIntegrationEventHandler>();
+            services.AddTransient<IIntegrationEventHandler<OrderStartedIntegrationEvent>, OrderStartedIntegrationEventHandler>();
+            services.AddTransient<IIntegrationEventHandler<UserCheckoutAcceptedIntegrationEvent>, UserCheckoutAcceptedIntegrationEventHandler>();
             // 注册动态事件处理器（通用功能）
             services.AddTransient<UniversalLoggerEventHandler>();
         }

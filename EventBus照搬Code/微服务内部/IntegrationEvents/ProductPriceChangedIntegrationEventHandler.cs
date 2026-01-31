@@ -3,8 +3,7 @@ using System.Threading.Tasks;
 
 namespace EventBus照搬Code.微服务内部.IntegrationEvents
 {
-    public class ProductPriceChangedIntegrationEventHandler
-    : IIntegrationEventHandler<ProductPriceChangedIntegrationEvent>
+    public class ProductPriceChangedIntegrationEventHandler : IIntegrationEventHandler<ProductPriceChangedIntegrationEvent>
     {
         private readonly IProductRepository _productRepository;
         private readonly ILogger<ProductPriceChangedIntegrationEventHandler> _logger;
